@@ -36,13 +36,18 @@ Rank second-stage models by validation performance and compute a **step-wise top
 <p align="center"><em>
 </em></p>
 
+### Dataset
+The '/dataset' folder contains all the data necessary for model training.
 
 
 # Quick Start
 
 
 # Citation
+### If our work was helpful in your research, please kindly cite this work:
 
+```
+```
 
 
 
