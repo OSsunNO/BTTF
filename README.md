@@ -6,9 +6,9 @@ Back to the Future: Look-ahead Augmentation and Parallel Self-Refinement for Tim
   <img src="https://img.shields.io/badge/WWW'26-Short%20Paper-ff8c00"/>
 </p>
 
-Official implementation of **Back to the Future (BTTF)**, a simple yet effective framework for **long-term time series forecasting (LTSF)** via **look-ahead augmentation**, **parallel self-refinement**, and **Ensembled Forecasting**.
+Official implementation of **Back to the Future (BTTF)**, a simple yet effective framework for **long-term time series forecasting (LTSF)** via **look-ahead augmentation**, **parallel self-refinement**, and **ensembled Forecasting**.
 
-BTTF leverages segments of model-generated future predictions as **future-aware context**, enabling DMS-style parallelism while implicitly retaining IMS-like temporal dependency.
+BTTF leverages segments of model-generated future predictions as **future-aware context**, enabling DMS-style parallelism while implicitly preserving IMS-like temporal dependencies.
 
 <p align="center">
   <img src="image/fig1.jpg" width="60%"/>
@@ -19,16 +19,16 @@ BTTF leverages segments of model-generated future predictions as **future-aware 
 
 ### Method Overview
 
-BTTF is a two-stage framework that refines a base forecasting model using **future-aware augmentation** and **parallel self-refinement**, then stabilizes predictions with a **step-wise top-K ensemble**.
+BTTF is a two-stage framework that refines a base forecasting model through **future-aware augmentation** and **parallel self-refinement**, and further stabilizes predictions via a **step-wise top-K ensemble**.
 
 #### 1) Look-ahead Augmentation
-Given a first-stage forecast, split the predicted horizon into **N segments** and append each segment to the original input window to form augmented inputs.
+Given a first-stage forecast, the predicted horizon is split into **N segments**, each of which is appended to the original input window to form augmented inputs.
 
 #### 2) Parallel Self-Refinement
-Train **N independent** second-stage predictors on the augmented inputs; each model learns a distinct refinement pattern.
+**N independent** second-stage predictors are trained on the augmented inputs, each learning a distinct refinement pattern.
 
 #### 3) Ensembled Forecasting
-Rank second-stage models by validation performance and compute a **step-wise top-K** ensemble; choose the optimal $\(K^*\)$ via variance and co-variance analysis.
+Second-stage models are ranked by validation performance, and a **step-wise top-K** ensemble is constructed by selecting the optimal $K^*$ based on variance and covariance analysis.
 
 <p align="center">
   <img src="image/fig2.jpg" width="100%"/>
@@ -37,12 +37,12 @@ Rank second-stage models by validation performance and compute a **step-wise top
 </em></p>
 
 ### Dataset
-The '/dataset' folder contains all the data necessary for model training.
-
+The `/dataset` directory contains the datasets used for model training and evaluation.
 
 # Quick Start
-
-
+ - The framework can be easily reproduced by running the Jupyter Notebook (`.ipynb`) files within each `{model_name}_{horizon_length}` directory.
+ - Each directory includes Jupyter Notebook files corresponding to four benchmark datasets.
+   
 # Citation
 ### If our work was helpful in your research, please kindly cite this work:
 
