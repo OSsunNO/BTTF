@@ -42,12 +42,13 @@ The `/dataset` directory contains the datasets used for model training and evalu
 # Quick Start
 
 ```bash
-# single test run
+# Single test run
 python run_parallel.py --gpus 0 --dataset etth1 --pred_len 96
 
-# full parallel experiments
+# Full experiments (All Datasets & Horizon)
 python run_parallel.py --gpus 0,1,2,3
 ```
+**=> For more detailed experiment configurations, please refer to ExpDetails.md.**
 
 
    
@@ -55,6 +56,12 @@ python run_parallel.py --gpus 0,1,2,3
 ### If our work was helpful in your research, please kindly cite this work:
 
 ```
+@article{kim2026back,
+  title={Back to the Future: Look-ahead Augmentation and Parallel Self-Refinement for Time Series Forecasting},
+  author={Kim, Sunho and Yoon, Susik},
+  journal={arXiv preprint arXiv:2602.02146},
+  year={2026}
+}
 ```
 
 
