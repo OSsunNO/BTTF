@@ -40,8 +40,16 @@ Second-stage models are ranked by validation performance, and a **step-wise top-
 The `/dataset` directory contains the datasets used for model training and evaluation.
 
 # Quick Start
- - The framework can be easily reproduced by running the Jupyter Notebook (`.ipynb`) files within each `{model_name}_{horizon_length}` directory.
- - Each directory includes Jupyter Notebook files corresponding to four benchmark datasets.
+
+```bash
+# single test run
+python run_parallel.py --gpus 0 --dataset etth1 --pred_len 96
+
+# full parallel experiments
+python run_parallel.py --gpus 0,1,2,3
+```
+
+
    
 # Citation
 ### If our work was helpful in your research, please kindly cite this work:
