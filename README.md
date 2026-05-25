@@ -56,10 +56,11 @@ python run_parallel.py --gpus 0,1,2,3
 ### If our work was helpful in your research, please kindly cite this work:
 
 ```
-@article{kim2026back,
+@inproceedings{kim2026back,
   title={Back to the Future: Look-ahead Augmentation and Parallel Self-Refinement for Time Series Forecasting},
   author={Kim, Sunho and Yoon, Susik},
-  journal={arXiv preprint arXiv:2602.02146},
+  booktitle={Proceedings of the ACM Web Conference 2026},
+  pages={8581--8584},
   year={2026}
 }
 ```
